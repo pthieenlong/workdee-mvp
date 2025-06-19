@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --font-display: "Be Vietnam Pro", sans-serif;
+        --color-primary: #0b1d3a;
+        --color-accent: #1d3557;
+        --color-highlight: #a8dadc;
+        --color-neutral: #f1faee;
+      }
+
+      .hero-section {
+        background-image: url("./assets/images/hero.jpg");
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="w-full relative">
+      <div
+        class="mx-auto max-w-[1366px] px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center"
+      >
+        <nav
+          class="w-full flex flex-rows bg-white py-[0.25rem] items-center border-solid border-b-[0.5px] border-gray-400"
+        >
+          <div class="flex flex-rows gap-[1rem] items-center mr-[3rem]">
+            <div class="w-[3.5rem]">
+              <img
+                src="./assets/workdee-main-logo.png"
+                alt="Workdee Logo"
+                class="w-full"
+              />
+            </div>
+          </div>
+          <div class="flex flex-rows gap-[1rem] items-center">
+            <a href="#">Find work</a>
+            <a href="#">Find talents</a>
+            <a href="#">Why Workdee?</a>
+            <a href="#">Pricing & Plans</a>
+          </div>
+          <div class="flex flex-rows gap-[1rem] items-center ml-auto">
+            <div
+              class="flex items-center gap-1 border-accent border-solid outline-[0.5px] rounded-[0.5rem] p-[0.5rem] h-[2.5rem] text-black"
+            >
+              <div class="flex gap-[0.5rem]">
+                <button>
+                  <i data-feather="search" class="w-[1.5rem] text-accent"></i>
+                </button>
+                <input type="text" class="w-[10rem]" placeholder="Search..." />
+              </div>
+              <div class="border-solid border-l-1 h-[1rem] mr-[0.25rem]"></div>
+              <div class="relative">
+                <button class="flex items-center" id="dropdownButton">
+                  <p class="size-fit hover:cursor-pointer" id="selectedTitle">
+                    Find work
+                  </p>
+                  <div class="hover:cursor-pointer">
+                    <i
+                      data-feather="chevron-down"
+                      class="w-[1rem] text-accent"
+                    ></i>
+                  </div>
+                </button>
+                <div
+                  class="absolute z-10 top-[2.5rem] border-[0.5px] border-gray-400 py-[0.5rem] rounded-[0.5rem] bg-white shadow-lg hidden"
+                  id="dropdownMenu"
+                >
+                  <div
+                    class="w-[8.5rem] text-center flex items-center gap-[1rem] px-[0.5rem] py-[0.5rem] hover:cursor-pointer hover:bg-gray-200 text-accent"
+                    data-value="Find work"
+                  >
+                    <div class="w-[1rem]">
+                      <i data-feather="briefcase"></i>
+                    </div>
+                    <p>Find work</p>
+                  </div>
+                  <div
+                    class="w-[8.5rem] text-center flex items-center gap-[1rem] px-[0.5rem] py-[0.5rem] hover:cursor-pointer hover:bg-gray-200 text-accent"
+                    data-value="Find talents"
+                  >
+                    <div class="w-[1rem]">
+                      <i data-feather="users"></i>
+                    </div>
+                    <p>Find talents</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-[0.5rem] items-center ml-auto">
+              <a href="#" class="rounded-[0.25rem] px-[1rem] py-[0.25rem]"
+                >Log In</a
+              >
+              <a
+                href="#"
+                class="rounded-[0.25rem] bg-accent px-[1rem] py-[0.25rem] text-white"
+                >Sign up</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <div class="xl:w-[1366px] flex flex-col items-center mx-auto">
+        <div
+          class="hero-section w-full h-[35rem] bg-center bg-cover rounded-[1rem] overflow-hidden relative mt-[1.25rem]"
+        >
+          <div
+            class="relative top-0 left-0 z-2 flex flex-col justify-center w-[65%] h-full pl-[5rem]"
+          >
+            <h1 class="text-neutral text-[4.5rem] font-bold">
+              Where bright minds <br />meet bold missions
+            </h1>
+            <div class="flex flex-row items-center gap-[1rem] mt-[1rem]">
+              <a
+                href="#"
+                class="flex items-center justify-center rounded-[0.25rem] bg-accent px-[1rem] py-[0.5rem] text-white h-[3rem] w-[12.5rem] font-semibold"
+                >Hire a freelancer</a
+              >
+              <div
+                class="flex items-center gap-1 bg-black/55 border-neutral border-solid outline-[0.5px] rounded-[0.5rem] p-[0.5rem] h-[2.5rem] text-neutral"
+              >
+                <div class="flex gap-[0.5rem]">
+                  <button>
+                    <i
+                      data-feather="search"
+                      class="w-[1.5rem] text-neutral"
+                    ></i>
+                  </button>
+                  <input
+                    type="text"
+                    class="w-[10rem] text-neutral"
+                    placeholder="Search..."
+                  />
+                </div>
+                <div
+                  class="border-solid border-l-1 h-[1rem] mr-[0.25rem]"
+                ></div>
+                <div class="relative">
+                  <button class="flex items-center" id="dropdownButton2">
+                    <p
+                      class="size-fit hover:cursor-pointer"
+                      id="selectedTitle2"
+                    >
+                      Find work
+                    </p>
+                    <div class="hover:cursor-pointer">
+                      <i
+                        data-feather="chevron-down"
+                        class="w-[1rem] text-neutral"
+                      ></i>
+                    </div>
+                  </button>
+                  <div
+                    class="absolute z-10 top-[2.5rem] border-[0.5px] border-gray-400 py-[0.5rem] rounded-[0.5rem] bg-white shadow-lg hidden"
+                    id="dropdownMenu2"
+                  >
+                    <div
+                      class="w-[8.5rem] text-center flex items-center gap-[1rem] px-[0.5rem] py-[0.5rem] hover:cursor-pointer hover:bg-gray-200 text-accent"
+                      data-value="Find work"
+                    >
+                      <div class="w-[1rem]">
+                        <i data-feather="briefcase"></i>
+                      </div>
+                      <p>Find work</p>
+                    </div>
+                    <div
+                      class="w-[8.5rem] text-center flex items-center gap-[1rem] px-[0.5rem] py-[0.5rem] hover:cursor-pointer hover:bg-gray-200 text-accent"
+                      data-value="Find talents"
+                    >
+                      <div class="w-[1rem]">
+                        <i data-feather="users"></i>
+                      </div>
+                      <p>Find talents</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-black w-full h-full opacity-[15%] absolute top-0 left-0 z-1"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Search Bar Section -->
+      <div
+        class="w-full max-w-[1366px] mx-auto flex flex-row items-center mt-[1rem] mb-8"
+      >
+        <!-- Category Dropdown -->
+        <div
+          class="flex items-center bg-highlight rounded-l-lg px-4 py-2 border border-r-0 border-[#a8dadc] h-12"
+        >
+          <i data-feather="list" class="w-5 h-5 text-accent mr-2"></i>
+          <select
+            class="bg-transparent outline-none text-primary font-medium h-full"
+          >
+            <option>All Categories</option>
+            <option>Marketing</option>
+            <option>Development</option>
+            <option>Design</option>
+          </select>
+        </div>
+        <!-- Search Input -->
+        <div
+          class="flex-1 flex items-center bg-neutral px-4 py-2 border border-[#a8dadc] h-12"
+        >
+          <i data-feather="search" class="w-5 h-5 text-accent mr-2"></i>
+          <input
+            type="text"
+            placeholder="Search jobs..."
+            class="w-full bg-transparent outline-none text-primary h-full"
+          />
+        </div>
+        <!-- Search Button -->
+        <button
+          class="bg-accent text-white font-semibold px-8 py-2 rounded-r-lg h-12 hover:bg-primary transition"
+        >
+          Search
+        </button>
+      </div>
+
+      <!-- List of Jobs Section -->
+      <div class="w-full max-w-[1366px] mx-auto flex flex-row gap-8 mt-[1rem]">
+        <!-- Job List Section -->
+        <div class="flex-1 flex flex-col gap-6">
+          <!-- Job Card Example -->
+          <div class="flex flex-col gap-6">
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Shopify Development Assistance
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1340$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Need to transition a website (that is still in construction)
+                from one theme to another. Looking for ongoing support with
+                various updates to shopify page.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Web Design</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Web Development</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Shopify</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Shopify App</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Shopify Templates</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Remote React Developer</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2100$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Join our team to build modern web applications using React and
+                TypeScript. Flexible hours and remote work available.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >React</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Remote</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Frontend</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                UI/UX Designer for Mobile App
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+980$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Looking for a creative UI/UX designer to revamp our mobile app.
+                Experience with Figma and prototyping required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >UI/UX</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Figma</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Mobile</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Design</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Full Stack Engineer (Node.js & Vue)
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1750$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Seeking a full stack engineer to develop scalable web
+                applications using Node.js and Vue.js. Experience with REST APIs
+                required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Full Stack</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >API</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                WordPress Site Optimization
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+600$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Optimize our WordPress site for speed and SEO. Must have
+                experience with caching plugins and Google PageSpeed Insights.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >WordPress</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >SEO</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Performance</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Google</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                E-commerce Backend API Developer
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2500$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop robust backend APIs for our e-commerce platform.
+                Experience with Node.js, Express, and MongoDB is a must.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Express</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >API</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Python Data Analyst</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1100$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Analyze large datasets and generate actionable insights.
+                Proficiency in Python, Pandas, and data visualization tools
+                required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Python</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Pandas</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Data Analysis</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Visualization</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Mobile App QA Tester</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+900$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Test mobile applications for bugs and usability issues.
+                Experience with Android and iOS platforms is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >QA</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Mobile</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Android</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >iOS</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">DevOps Engineer (AWS)</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+3200$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Manage AWS infrastructure and CI/CD pipelines. Must have
+                experience with Docker, Kubernetes, and cloud automation.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >AWS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >DevOps</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Docker</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Kubernetes</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Content Writer (Tech Blog)
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+450$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Write engaging and informative articles for our technology blog.
+                SEO and WordPress experience preferred.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Writing</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >SEO</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Blog</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >WordPress</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Angular Frontend Developer
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1600$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop and maintain Angular-based web applications. Must be
+                proficient in Angular, RxJS, and RESTful APIs.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Angular</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >RxJS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Frontend</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >API</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Junior PHP Developer</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+700$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Assist in developing and maintaining PHP-based web applications.
+                Knowledge of Laravel or Symfony is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >PHP</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Laravel</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Symfony</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Backend</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Shopify Theme Customization
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1200$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Customize Shopify themes to match client branding and
+                requirements. Liquid and CSS experience required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Shopify</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Liquid</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >CSS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Theme</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Social Media Manager</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1050$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Manage and grow our social media presence across multiple
+                platforms. Content creation and analytics experience required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Social Media</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Content</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Analytics</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Marketing</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">Backend Developer (Go)</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1950$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Build and maintain backend services using Go. Experience with
+                microservices and cloud deployment is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Go</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Backend</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Microservices</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Cloud</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Machine Learning Engineer
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2700$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop and deploy machine learning models for real-world
+                applications. Python, TensorFlow, and data science experience
+                required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Python</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >TensorFlow</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Data Science</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Project Manager (Agile)
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2300$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Lead agile teams to deliver software projects on time and within
+                budget. Scrum certification is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Project Management</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Agile</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Scrum</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Leadership</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Ruby on Rails Developer
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1800$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop and maintain web applications using Ruby on Rails.
+                Experience with PostgreSQL and Heroku is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Ruby on Rails</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Heroku</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Web App</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">iOS Swift Developer</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2100$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop and maintain iOS applications using Swift. Experience
+                with UIKit and RESTful APIs required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >iOS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Swift</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >UIKit</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >API</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Android Kotlin Developer
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2000$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Develop Android applications using Kotlin. Familiarity with
+                Jetpack Compose and MVVM architecture is a plus.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Android</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Kotlin</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Jetpack</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >MVVM</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Cloud Solutions Architect
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+3500$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Design and implement cloud solutions for enterprise clients.
+                AWS, Azure, or GCP certification required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Cloud</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >AWS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Azure</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >GCP</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">SaaS Product Owner</h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+2600$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Own the product roadmap and feature prioritization for our SaaS
+                platform. Agile and SaaS experience required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >SaaS</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Product Owner</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Agile</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Roadmap</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-neutral border border-highlight rounded-xl p-[1rem] text-primary flex flex-col gap-1"
+            >
+              <h2 class="text-xl font-semibold mb-1">
+                Business Analyst (Fintech)
+              </h2>
+              <div class="flex items-center gap-4 mb-2">
+                <span
+                  class="flex items-center gap-1 text-accent text-sm font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline w-7 h-7 text-highlight"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#a8dadc" />
+                    <path
+                      d="M8.5 12.5l3 3 4-5"
+                      stroke="#0b1d3a"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  Payment verified
+                </span>
+                <span class="text-primary text-base font-semibold">+1550$</span>
+              </div>
+              <p class="mb-3 text-accent">
+                Analyze business requirements and processes for our fintech
+                solutions. Experience in finance and data analysis required.
+              </p>
+              <hr class="my-2 border-t border-[#e0e6ed]" />
+              <div class="flex flex-row justify-between items-center mt-2">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Business Analysis</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Fintech</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Finance</span
+                  >
+                  <span
+                    class="bg-highlight text-primary text-xs px-3 py-1 rounded-full"
+                    >Data Analysis</span
+                  >
+                </div>
+                <div class="flex flex-row gap-2 items-center ml-4">
+                  <button
+                    class="bg-accent text-white font-semibold px-6 py-1 rounded-full text-sm hover:bg-primary transition"
+                  >
+                    Apply
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="eye-off" class="w-4 h-4 text-accent"></i>
+                  </button>
+                  <button
+                    class="w-9 h-9 flex items-center justify-center border border-accent rounded-full bg-white hover:bg-highlight transition"
+                  >
+                    <i data-feather="heart" class="w-4 h-4 text-accent"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="w-[320px] flex-shrink-0">
+          <div class="bg-white rounded-xl shadow border border-gray-200 p-6">
+            <h3 class="text-lg font-semibold mb-4">Filters</h3>
+            <!-- Add filter controls here -->
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1">Category</label>
+              <select class="w-full border rounded px-3 py-2">
+                <option>All</option>
+                <option>Marketing</option>
+                <option>Development</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-1"
+                >Experience Level</label
+              >
+              <select class="w-full border rounded px-3 py-2">
+                <option>All</option>
+                <option>Entry</option>
+                <option>Intermediate</option>
+                <option>Expert</option>
+              </select>
+            </div>
+            <!-- Add more filters as needed -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    feather.replace();
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const selectedTitle = document.getElementById("selectedTitle");
+    const menuItems = dropdownMenu.querySelectorAll("div[data-value]");
+    const dropdownButton2 = document.getElementById("dropdownButton2");
+    const dropdownMenu2 = document.getElementById("dropdownMenu2");
+    const selectedTitle2 = document.getElementById("selectedTitle2");
+    const menuItems2 = dropdownMenu2.querySelectorAll("div[data-value]");
+    // Toggle dropdown
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+    });
+    dropdownButton2.addEventListener("click", () => {
+      dropdownMenu2.classList.toggle("hidden");
+    });
+    // Handle menu item selection
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        selectedTitle.textContent = item.getAttribute("data-value");
+        dropdownMenu.classList.add("hidden");
+      });
+    });
+    menuItems2.forEach((item) => {
+      item.addEventListener("click", () => {
+        selectedTitle2.textContent = item.getAttribute("data-value");
+        dropdownMenu2.classList.add("hidden");
+      });
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+      if (
+        !dropdownButton.contains(event.target) &&
+        !dropdownMenu.contains(event.target)
+      ) {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+    if (
+      !dropdownButton.contains(event.target) &&
+      !dropdownMenu.contains(event.target)
+    ) {
+      dropdownMenu.classList.add("hidden");
+    }
+  </script>
+</html>
